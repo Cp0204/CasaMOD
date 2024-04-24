@@ -21,19 +21,22 @@ let tick;
 function setup() {
   canvas = {
     a: document.createElement('canvas'),
-    b: document.createElement('canvas') };
+    b: document.createElement('canvas')
+  };
 
   ctx = {
     a: canvas.a.getContext('2d'),
-    b: canvas.b.getContext('2d') };
+    b: canvas.b.getContext('2d')
+  };
 
   canvas.b.style = `
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-	`;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+  `;
   document.body.appendChild(canvas.b);
   particles = [];
   hover = false;
@@ -83,7 +86,8 @@ function getParticle(x, y) {
       ctx.a.strokeStyle = `hsla(${this.hue},100%,50%,${fadeInOut(this.life, this.ttl)})`;
       ctx.a.strokeRect(this.position.x - 0.5 * this.size, this.position.y - 0.5 * this.size, this.size, this.size);
       ctx.a.closePath();
-    } };
+    }
+  };
 
 }
 
