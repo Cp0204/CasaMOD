@@ -4,7 +4,7 @@ services:
   casamod:
     #build: .
     container_name: casamod
-    image: cp0204/casamod
+    image: cp0204/casamod:latest
     volumes:
       - /DATA/AppData/casamod:/DATA/AppData/casamod
       - /var/lib/casaos/www:/var/lib/casaos/www
@@ -13,7 +13,7 @@ services:
     deploy:
       resources:
         reservations:
-          memory: 1M
+          memory: 8M
 
 x-casaos:
   architectures:
