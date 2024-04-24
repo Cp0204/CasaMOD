@@ -38,12 +38,13 @@
 
 ## MOD列表
 
-| 名称        | 功能描述                                     |
-| ------------- | ----------------------------------------- |
-| cursor-geometric | 为鼠标添加几何扩散动画 |
+| 名称 | 功能描述 |
+| --- | -------- |
+| star-wallpaper | 动态星空壁纸 🌌 |
+| geometric-cursor | 为鼠标添加几何扩散动画 |
 | emoji-cursor | 为鼠标添加emoji跟随 😂 |
 | bing-wallpaper | 自动将每日 Bing 壁纸设置为 CasaOS 背景 🌇  |
-| helloworld    | 向你说 Hello, World! 👋                   |
+| helloworld    | 向你说 Hello, World! 👋 |
 
 ## 赞助
 

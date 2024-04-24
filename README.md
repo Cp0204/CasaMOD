@@ -38,12 +38,13 @@ In addition, you can access the files in the `/DATA/AppData/casamod/icon` direct
 
 ## MOD List
 
-| Name        | Description                                     |
-| ------------- | ----------------------------------------- |
+| Name | Description |
+| ---- | ----------- |
+| star-wallpaper | Animated Star Wallpaper 🌌 |
 | cursor-geometric | Add geometric spread animation to mouse |
 | emoji-cursor | Add emoji follow to mouse 😂 |
-| bing-wallpaper | Automatically set the daily Bing wallpaper as the CasaOS background 🌇  |
-| helloworld    | Say Hello, World to you! 👋                   |
+| bing-wallpaper | Automatically set the daily Bing wallpaper as the CasaOS background 🌇 |
+| helloworld    | Say Hello, World to you! 👋 |
 
 ## Donate
 
