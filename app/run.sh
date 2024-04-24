@@ -20,7 +20,7 @@ start() {
     cp -r /app/mod/* "$mod_store_dir"
   fi
 
-  # Consistent use of -p flag for mkdir
+  # Creating directory
   for dir in "$mod_dir" "$icon_dir"; do
     if [[ ! -d "$dir" ]]; then
       echo "Creating directory ${dir}"
@@ -28,7 +28,7 @@ start() {
     fi
   done
 
-  # Consistent use of ln -s with target directory first
+  # Creating symlink
   for src_dir in "$mod_dir" "$icon_dir"; do
     target_dir="${www_dir}/${src_dir##*/}"
     if [[ ! -d "$target_dir" ]]; then
@@ -47,29 +47,42 @@ start() {
   # Backup index.html
   if [[ ! -f "$index_html_bak" ]]; then
     cp "$index_html" "$index_html_bak"
-    echo "Backed up index.html"
+    echo "Backup index.html"
   else
     cp "$index_html_bak" "$index_html"
   fi
 
-  # Build script tags for mods
-  script_tags=""
+  # Build tags for mods
+  js_tags=""
+  css_tags=""
   for mod_path in "$mod_dir"/*; do
     mod_js_path="${mod_path}/mod.js"
+    mod_css_path="${mod_path}/mod.css"
     if [[ -f "$mod_js_path" ]]; then
       echo "Reading ${mod_js_path}"
-      script_tags+="<script type=\"text/javascript\" src=\"mod/${mod_path##*/}/mod.js\"></script>\n"
+      js_tags+="<script type=\"text/javascript\" src=\"mod/${mod_path##*/}/mod.js\"></script>\n"
+    fi
+    if [[ -f "$mod_css_path" ]]; then
+      echo "Reading ${mod_js_path}"
+      css_tags+="<link href=\"/mod/${mod_path##*/}/mod.css\" rel=\"stylesheet\">\n"
     fi
   done
-  if [[ -z "$script_tags" ]]; then
-    script_tags="\n<!-- CasaMod is loaded, but no mod found -->\n"
+  if [[ -z "$js_tags" ]]; then
+    js_tags="\n<!-- CasaMOD is loaded, but no js found -->\n"
   else
-    script_tags="\n<!-- CasaMod -->\n${script_tags}"
+    js_tags="\n<!-- CasaMOD js -->\n${js_tags}"
   fi
-  #echo "$script_tags"
+  #echo "$js_tags"
+  if [[ -z "$css_tags" ]]; then
+    css_tags="\n<!-- CasaMOD is loaded, but no css found -->\n"
+  else
+    css_tags="\n<!-- CasaMOD css -->\n${css_tags}"
+  fi
+  #echo "$css_tags"
 
   # Modify index.html
-  sed -i "s|<\/body>|${script_tags}<\/body>|" "$index_html"
+  sed -i "s|<title>|${css_tags}<title>|" "$index_html"
+  sed -i "s|<\/body>|${js_tags}<\/body>|" "$index_html"
   echo "Modified index.html"
 
   echo "Keep Running..."
