@@ -34,6 +34,8 @@ Modify the CasaOS front-end with ease, just like adding mods to a game 🎨
     *   Move the MOD file out of the `/DATA/AppData/casamod/mod` directory.
     *   Restart CasaMOD.
 
+In addition, you can access the files in the `/DATA/AppData/casamod/icon` directory via `http://yourhost/icon/*`.
+
 ## MOD List
 
 | Name        | Description                                     |

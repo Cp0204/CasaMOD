@@ -34,6 +34,8 @@
     *   将 MOD 文件移出 `/DATA/AppData/casamod/mod` 目录
     *   重启 CasaMOD
 
+此外，你可以通过 `http://yourhost/icon/*` 访问到 `/DATA/AppData/casamod/icon` 目录中的文件。
+
 ## MOD列表
 
 | 名称        | 功能描述                                     |
