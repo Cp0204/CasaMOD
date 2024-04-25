@@ -36,6 +36,8 @@
 
 此外，你可以通过 `http://yourhost/icon/*` 访问到 `/DATA/AppData/casamod/icon` 目录中的文件。
 
+> [!WARNING]
+> ### 警告：不要加载来路不明、不明源代码的MOD，这可能会引发**安全**问题。
 ## MOD列表
 
 | 名称 | 功能描述 |

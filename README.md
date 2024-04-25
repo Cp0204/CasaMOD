@@ -36,6 +36,9 @@ Modify the CasaOS front-end with ease, just like adding mods to a game 🎨
 
 In addition, you can access the files in the `/DATA/AppData/casamod/icon` directory via `http://yourhost/icon/*`.
 
+> [!WARNING]
+> ### Don't load MODs from unknown sources with unknown source code, this may cause **SECURITY** issues.
+
 ## MOD List
 
 | Name | Description |
