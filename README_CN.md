@@ -40,13 +40,15 @@
 > ### 警告：不要加载来路不明、不明源代码的MOD，这可能会引发**安全**问题。
 ## MOD列表
 
-| 名称 | 功能描述 |
-| --- | -------- |
-| star-wallpaper | 动态星空壁纸 🌌 |
-| geometric-cursor | 为鼠标添加几何扩散动画 |
-| emoji-cursor | 为鼠标添加emoji跟随 😂 |
-| bing-wallpaper | 自动将每日 Bing 壁纸设置为 CasaOS 背景 🌇  |
-| helloworld    | 向你说 Hello, World! 👋 |
+| 名称 | 功能描述 | 作者 |
+| --- | -------- | ---- |
+| widget-sortable | 允许小部件拖拽排序 | lan, Cp0204 |
+| hide-some-app | 隐藏某些应用 | Cp0204 |
+| star-wallpaper | 动态星空壁纸 🌌 | Anonymous |
+| geometric-cursor | 为鼠标添加几何扩散动画 | Anonymous |
+| emoji-cursor | 为鼠标添加emoji跟随 😂 | Anonymous |
+| bing-wallpaper | 自动将每日 Bing 壁纸设置为 CasaOS 背景 🌇  | Cp0204 |
+| helloworld    | 向你说 Hello, World! 👋 | Cp0204 |
 
 ## 赞助
 
