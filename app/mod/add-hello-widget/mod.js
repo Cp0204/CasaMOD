@@ -10,7 +10,7 @@
 
         headerImg = "/v1/users/avatar?token=" + localStorage.getItem('access_token');
         username = JSON.parse(localStorage.getItem('user')).username;
-        description = "How Are You Today?";
+        description = localStorage.getItem('lang') == "zh_cn" ? "食咗饭未啊？" : "How Are You Today?";
 
         newElement.innerHTML = `
 <div class="widget has-text-white is-relative">
