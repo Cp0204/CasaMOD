@@ -2,61 +2,75 @@
 // date: 2024-04-26
 
 (function () {
+    const observedAnchor = '.ps-container';
+    function moduleFunction() {
+        console.log("widget-sortable Enable")
+
+        // 为 div 添加 widget-id 属性，用于记录位置
+        addWidgetId('clock');
+        addWidgetId('cpu');
+        addWidgetId('disk', 2);
+        addWidgetId('network', 2);
+
+        // 增加网络状态插件margin-bottom
+        var network_widget = document.querySelector(".last-block");
+        network_widget.style.marginBottom = '16px';
+
+        // 获取插件父节点
+        Sortable.create(document.querySelector(".ps-container"), {
+            group: {
+                name: "widget-sortable"
+            },
+            animation: 500,
+            ghostClass: "sortable-ghost",
+            filter: ".ps__rail-x, .ps__rail-y",
+            dataIdAttr: "widget-id",
+            store: {
+                // 缓存到localStorage
+                get: function (sortable) {
+                    var order = localStorage.getItem(sortable.options.group.name);
+                    return order ? order.split('|') : [];
+                },
+                set: function (sortable) {
+                    var order = sortable.toArray();
+                    localStorage.setItem(sortable.options.group.name, order.join('|'));
+                }
+            }
+        });
+    }
+
+    function addWidgetId(elementClass, parent = 1) {
+        element = document.querySelector(`.${elementClass}`);
+        if (element) {
+            for (let i = 0; i < parent; i++) {
+                element = element.parentElement;
+            }
+            element.setAttribute('widget-id', elementClass);
+        }
+    }
+
+    // ================================================
+    // 观察，等待 vue 渲染后执行
+    // Observe and wait for Vue rendering to complete.
+    // ================================================
     const observer = new MutationObserver(mutations => {
         mutations.forEach(mutation => {
-            if (mutation.target.querySelector('.ps-container')) {
-                // 为 div 添加 widget-id 属性，用于记录位置
-                addWidgetId('clock');
-                addWidgetId('cpu');
-                addWidgetId('disk', 2);
-                addWidgetId('network', 2);
-
-                widgetSortable();
-
+            if (mutation.target.querySelector(observedAnchor)) {
                 observer.disconnect();
+                debounced();
             }
         });
     });
-    observer.observe(document.body, { childList: true, subtree: true });
-})();
-
-function addWidgetId(elementClass, parent = 1) {
-    element = document.querySelector(`.${elementClass}`);
-    if (element) {
-        for (let i = 0; i < parent; i++) {
-            element = element.parentElement;
-        }
-        element.setAttribute('widget-id', elementClass);
+    observer.observe(document.body, { childList: true, subtree: true, once: true });
+    function debounce(func, wait) {
+        let timeout;
+        return (...args) => {
+            clearTimeout(timeout);
+            timeout = setTimeout(() => func.apply(this, args), wait);
+        };
     }
-}
-
-function widgetSortable() {
-    // 增加网络状态插件margin-bottom
-    var network_widget = document.querySelector(".last-block");
-    network_widget.style.marginBottom = '16px';
-
-    // 获取插件父节点
-    Sortable.create(document.querySelector(".ps-container"), {
-        group: {
-            name: "widget-sortable"
-        },
-        animation: 500,
-        ghostClass: "sortable-ghost",
-        filter: ".ps__rail-x, .ps__rail-y",
-        dataIdAttr: "widget-id",
-        store: {
-            // 缓存到localStorage
-            get: function (sortable) {
-                var order = localStorage.getItem(sortable.options.group.name);
-                return order ? order.split('|') : [];
-            },
-            set: function (sortable) {
-                var order = sortable.toArray();
-                localStorage.setItem(sortable.options.group.name, order.join('|'));
-            }
-        }
-    });
-}
+    const debounced = debounce(moduleFunction, 1);
+})();
 
 
 /*! Sortable 1.8.4 - MIT | git://github.com/SortableJS/Sortable.git */
