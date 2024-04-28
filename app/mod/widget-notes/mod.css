@@ -1,0 +1,25 @@
+.widget-notes-textarea{
+  width: 100%;
+  background-color: transparent;
+  padding: 12px 16px !important;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  min-height: 100px;
+  box-sizing: border-box;
+  overflow: hidden;
+  color: hsl(208, 16%, 85%);
+  word-break: break-all;
+  border-radius: 4px;
+  outline: none;
+  border-width: 2px;
+  border-color: rgb(255 255 255 / 10%);
+}
+.widget-notes-textarea:focus{
+  background-color: rgb(255 255 255 / 5%);
+}
+.widget-tips{
+  font-size: 12px;
+  color: rgb(255 255 255 / 50%);
+}
+
