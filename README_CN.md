@@ -42,8 +42,9 @@
 
 | 名称 | 功能描述 | 作者 |
 | --- | -------- | ---- |
-| add-hello-widget | 增加问候小部件 👋 | Cp0204 |
-| widget-sortable | 允许小部件拖拽排序 ↕️ | lan, Cp0204 |
+| add-widget-notes | 增加快捷便签小部件 📝 | LANMIN-X |
+| add-widget-hello | 增加问候小部件 👋 | Cp0204 |
+| widget-sortable | 允许小部件拖拽排序 ↕️ | LANMIN-X, Cp0204 |
 | hide-some-app | 隐藏某些应用 🙈 | Cp0204 |
 | star-wallpaper | 动态星空壁纸 🌌 | Anonymous |
 | geometric-cursor | 为鼠标添加几何扩散动画 💠 | Anonymous |
