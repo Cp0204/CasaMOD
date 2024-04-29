@@ -39,7 +39,7 @@
                     const data = await response.json();
                     return data.hitokoto;
                 } else {
-                    const response = await fetch('https://api.quotable.io/random');
+                    const response = await fetch('https://api.quotable.io/quotes/random');
                     const data = await response.json();
                     return data.content;
                 }
