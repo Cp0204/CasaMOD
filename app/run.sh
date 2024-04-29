@@ -18,22 +18,21 @@ start() {
     echo "Creating directory ${mod_store_dir}"
     mkdir -p "$mod_store_dir"
     cp -r /app/mod/* "$mod_store_dir"
+    echo -e "Delete this folder and it will be recreated when the new version of the container is started.\n删除本文件夹，新版本容器启动时将重建。" >> "${mod_store_dir}/Get_New_MODs.txt"
   fi
 
-  # Creating directory
+  # Process mapping directory
   for dir in "$mod_dir" "$icon_dir"; do
+    #Creating directory
     if [[ ! -d "$dir" ]]; then
       echo "Creating directory ${dir}"
       mkdir -p "$dir"
     fi
-  done
-
-  # Creating symlink
-  for src_dir in "$mod_dir" "$icon_dir"; do
-    target_dir="${www_dir}/${src_dir##*/}"
-    if [[ ! -d "$target_dir" ]]; then
-      echo "Creating symlink ${src_dir} to ${target_dir}"
-      ln -s "$src_dir" "$target_dir"
+    # Creating symlink
+    symlink_dir="${www_dir}/${dir##*/}"
+    if [[ ! -d "$symlink_dir" ]]; then
+      echo "Creating symlink ${dir} to ${symlink_dir}"
+      ln -s "$dir" "$symlink_dir"
     fi
   done
 
