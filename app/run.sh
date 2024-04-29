@@ -62,7 +62,7 @@ start() {
       js_tags+="<script type=\"text/javascript\" src=\"mod/${mod_path##*/}/mod.js\"></script>\n"
     fi
     if [[ -f "$mod_css_path" ]]; then
-      echo "Reading ${mod_js_path}"
+      echo "Reading ${mod_css_path}"
       css_tags+="<link href=\"/mod/${mod_path##*/}/mod.css\" rel=\"stylesheet\">\n"
     fi
   done
