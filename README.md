@@ -43,8 +43,9 @@ In addition, you can access the files in the `/DATA/AppData/casamod/icon` direct
 
 | Name | Description | Author |
 | ---- | ----------- | ------ |
+| add-widget-quotable | Add Quotable widget 💬 | Cp0204 |
 | add-widget-notes | Add Notes widget 📝 | LANMIN-X |
-| add-widget-hello | Add the Greet You widget 👋 | Cp0204 |
+| add-widget-hello | Add Greet You widget 👋 | Cp0204 |
 | widget-sortable | Allow widgets to be sorted by dragging and dropping them ↕️ | LANMIN-X, Cp0204 |
 | hide-some-app | hide-some-apps 🙈 | Cp0204 |
 | star-wallpaper | Animated star wallpaper 🌌 | Anonymous |
