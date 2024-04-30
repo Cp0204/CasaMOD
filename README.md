@@ -43,6 +43,7 @@ In addition, you can access the files in the `/DATA/AppData/casamod/icon` direct
 
 | Name | Description | Author |
 | ---- | ----------- | ------ |
+| allow-modify-image | Allow modify image settings ✏️ | Cp0204 |
 | add-widget-quotable | Add Quotable widget 💬 | Cp0204 |
 | add-widget-notes | Add Notes widget 📝 | LANMIN-X |
 | add-widget-hello | Add Greet You widget 👋 | Cp0204 |

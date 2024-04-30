@@ -42,6 +42,7 @@
 
 | 名称 | 功能描述 | 作者 |
 | --- | -------- | ---- |
+| allow-modify-image | 允许编辑镜像设置 ✏️ | Cp0204 |
 | add-widget-quotable | 增加一言小部件 💬 | Cp0204 |
 | add-widget-notes | 增加快捷便签小部件 📝 | LANMIN-X |
 | add-widget-hello | 增加问候小部件 👋 | Cp0204 |
