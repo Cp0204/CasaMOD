@@ -23,7 +23,7 @@
     </div>
     <div class="columns is-mobile is-multiline pt-2">
       <div class="column is-full pb-0">
-        <P id="quotable">${quotable}</P>
+        <P id="quotable" style="cursor: pointer;">${quotable}</P>
       </div>
     </div>
   </div>
@@ -45,19 +45,19 @@
                 }
             } catch (error) {
                 console.error('Failed to get Quotable', error);
+                return false
             }
         }
 
-        async function cacheQuotable() {
+        async function cacheQuotable(force = false) {
             const cacheKey = 'quotable';
             // 缓存过期时间：1小时
             const cacheExpiry = 60 * 60 * 1000;
             // 尝试从 localStorage 获取缓存数据
             const cachedData = localStorage.getItem(cacheKey);
-            if (cachedData) {
+            if (cachedData && force == false) {
                 const { quotable, timestamp } = JSON.parse(cachedData);
-                const now = Date.now();
-                if (now - timestamp < cacheExpiry) {
+                if (Date.now() - timestamp < cacheExpiry) {
                     return quotable;
                 }
             }
@@ -69,7 +69,11 @@
             }));
             return newQuotable;
         }
+
         document.querySelector('#quotable').innerHTML = await cacheQuotable();
+        document.querySelector('#quotable').addEventListener('click', async function () {
+            document.querySelector('#quotable').innerHTML = await cacheQuotable(true);
+        });
     }
 
 
