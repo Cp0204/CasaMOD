@@ -41,7 +41,7 @@
                 } else {
                     const response = await fetch('https://api.quotable.io/quotes/random');
                     const data = await response.json();
-                    return data.content;
+                    return data[0].content;
                 }
             } catch (error) {
                 console.error('Failed to get Quotable', error);
