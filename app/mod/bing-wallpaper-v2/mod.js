@@ -11,13 +11,14 @@
         // The official API cannot cross the domain
         // https://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=zh-CN
         const mkt = mapLanguageCode(localStorage.getItem('lang'));
-        const apiUrl = `https://bing.biturl.top/?resolution=1920&format=json&index=0&mkt=${mkt}`;
+        let apiUrl = `https://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=${mkt}`;
+        apiUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(apiUrl)}`;
         fetch(apiUrl)
             .then(response => response.json())
             .then(data => {
                 // 改壁纸
                 // Change wallpaper
-                const imageUrl = data.url;
+                const imageUrl = `https://www.bing.com${data.images[0].url}`;
                 console.log("Bing Wallpaper URL:", imageUrl);
                 const bgElement = document.querySelector(observedAnchor);
                 bgElement.style.backgroundImage = `url("${imageUrl}")`;
@@ -26,7 +27,7 @@
                 // 添加右键菜单
                 // Add right-click menu
                 const menuElement = document.querySelector(".dropdown-content");
-                const htmlString = `<a class="dropdown-item is-flex is-align-items-center" target="_blank" style="width:250px;white-space:normal;" href="${data.copyright_link}">${data.copyright}</a>`;
+                const htmlString = `<a class="dropdown-item is-flex is-align-items-center" target="_blank" style="width:250px;white-space:normal;" href="${data.images[0].copyrightlink}">${data.images[0].copyright}</a>`;
                 menuElement.insertAdjacentHTML("beforeend", htmlString)
             })
             .catch(error => {
