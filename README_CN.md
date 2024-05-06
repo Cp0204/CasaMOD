@@ -42,6 +42,7 @@
 
 | 名称 | 功能描述 | 作者 |
 | --- | -------- | ---- |
+| dont-change-my-icon | 禁止编辑镜像地址时自动匹配图标 🚫 | Cp0204 |
 | add-hostname-to-title | 添加主机名到网页标题 ➕ | Cp0204 |
 | small-app-icon | 更小的应用图标 🤏 | Cp0204 |
 | allow-modify-image | 允许编辑镜像设置 ✏️ | Cp0204 |
