@@ -18,7 +18,7 @@ start() {
     echo "Creating directory ${mod_store_dir}"
     mkdir -p "$mod_store_dir"
     cp -r /app/mod/* "$mod_store_dir"
-    echo -e "Delete this folder and it will be recreated when the new version of the container is started.\n删除本文件夹，新版本容器启动时将重建。" >> "${mod_store_dir}/Get_New_MODs.txt"
+    echo -e "Delete this folder and it will be recreated when the new version of the container is started.\n\n删除本文件夹，新版本容器启动时将重建。" >>"${mod_store_dir}/Recreated_Store.txt"
   fi
 
   # Process mapping directory
@@ -27,6 +27,10 @@ start() {
     if [[ ! -d "$dir" ]]; then
       echo "Creating directory ${dir}"
       mkdir -p "$dir"
+      # Creating README
+      if [[ "$dir" == "$icon_dir" ]]; then
+        echo -e "This folder can be accessed by http(s)://casaos/icon/*, e.g. you can place app1.png and fill in icon/app1.png in the app icon settings.\n\n本文件夹内容可以被 http(s)://casaos/icon/* 访问，例如你可以放置 app1.png ，在应用图标设置中填 icon/app1.png" >>"${icon_dir}/README.txt"
+      fi
     fi
     # Creating symlink
     symlink_dir="${www_dir}/${dir##*/}"
