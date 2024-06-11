@@ -43,6 +43,7 @@ In addition, you can access the files in the `/DATA/AppData/casamod/icon` direct
 
 | Name | Description | Author |
 | ---- | ----------- | ------ |
+| add-widget-saying | Merger of hello and quotable 👋 | ChishFoxcat |
 | dont-change-my-icon | Disable auto-matching icons when editing image 🚫 | Cp0204 |
 | add-hostname-to-title | Add hostname to title ➕ | Cp0204 |
 | small-app-icon | Smaller app icons 🤏 | Cp0204 |

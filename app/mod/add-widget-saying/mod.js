@@ -7,7 +7,7 @@
 
         userImage = "/v1/users/avatar?token=" + localStorage.getItem('access_token');
         userName = JSON.parse(localStorage.getItem('user')).username;
-        saying = "你好！一言加载中..."
+        saying = localStorage.getItem('lang') === "zh_cn" ? "你好！一言加载中..." : "Hi, Saying is loading...";
 
         newElement.innerHTML = `
 <div class="widget has-text-white is-relative">
@@ -17,12 +17,12 @@
         <div class="column is-full pb-0">
         <div class="is-flex is-align-items-center">
             <div class="header-icon">
-                <img src="`+ userImage + `" loading="lazy" style="border-radius: 50%;" width="64">
+                <img src="${userImage}" loading="lazy" style="border-radius: 50%;" width="64">
             </div>
             <div class="ml-4 style="width:13rem">
-                <h3 class="has-text-left" style="font-size: 1.1rem; margin-top: -0.8rem;margin-bottom: 0.5rem;">`+ userName + `</h3>
-                <p class="has-text-left is-size-14px"style="color: hsl(208, 16%, 85%);">
-                    <p id="saying" style="cursor: pointer;font-size:12px;">${saying}</p>
+                <h3 class="has-text-left" style="font-size: 1.1rem; margin-top: -0.8rem;margin-bottom: 0.5rem;">${userName}</h3>
+                <p class="has-text-left" id="saying" style="cursor: pointer;font-size:12px;">
+                    ${saying}
                 </p>
             </div>
         </div>
@@ -69,7 +69,7 @@
         }
 
         document.querySelector('#saying').innerHTML = await cacheSaying();
-        document.querySelector('#saying').addEventListener('click', async function() {
+        document.querySelector('#saying').addEventListener('click', async function () {
             document.querySelector('#saying').innerHTML = await cacheSaying(true);
         });
     }
