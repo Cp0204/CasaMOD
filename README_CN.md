@@ -62,7 +62,7 @@
 
 如果你觉得这个项目对你有帮助，可以给我一点点支持，非常感谢～
 
-![WeChatPay](/img/wechat_pay_qrcode.png)
+![WeChatPay](https://cdn.jsdelivr.net/gh/Cp0204/Cp0204@main/img/wechat_pay_qrcode.png)
 
 ## 贡献指南
 
