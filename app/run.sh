@@ -10,8 +10,21 @@ www_dir="/var/lib/casaos/www"
 index_html="${www_dir}/index.html"
 index_html_bak="${index_html}.bak"
 
+casaos_framework="gin"
+
+host_exec() {
+  nsenter -m -u -i -n -p -t 1 sh -c "$1"
+}
+
 start() {
   echo "Starting..."
+
+  # v0.4.10+ migrate gin to echo
+  casaos_ver=$(host_exec "casaos -v | tr -d 'v'")
+  if [[ $(printf "%s\n" "$casaos_ver" "0.4.9" | sort -V | tail -n1) == "$casaos_ver" ]]; then
+    casaos_framework="echo"
+    echo "CasaOS v$casaos_ver"
+  fi
 
   # Copy mod_store
   if [[ ! -d "$mod_store_dir" ]]; then
@@ -88,6 +101,12 @@ start() {
   sed -i "s|<\/body>|${js_tags}<\/body>|" "$index_html"
   echo "Modified index.html"
 
+  # Restart gateway
+  if [[ $casaos_framework == "echo" ]]; then
+    host_exec "systemctl restart casaos-gateway.service"
+    echo "Restarted casaos-gateway.service"
+  fi
+
   echo "Keep Running..."
   while true; do
     sleep 1
@@ -100,6 +119,10 @@ stop() {
     cp "$index_html_bak" "$index_html"
     rm "$index_html_bak"
     echo "Restored index.html"
+    if [[ $casaos_framework == "echo" ]]; then
+      host_exec "systemctl restart casaos-gateway.service"
+      echo "Restarted casaos-gateway.service"
+    fi
   else
     echo "Backup file not found, cannot restore index.html"
   fi
