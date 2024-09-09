@@ -82,4 +82,4 @@ window.addEventListener('resize', () => {
     snowflakes.forEach(snowflake => {
         snowflake.reset();
     });
-}); 
+});
