@@ -41,8 +41,8 @@ class Snowflake {
     draw() {
         // 使用径向渐变创建透明边缘的雪花
         const gradient = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.size);
-        gradient.addColorStop(0, 'rgba(255, 255, 255, 1)'); // 中心不透明
-        gradient.addColorStop(1, 'rgba(255, 255, 255, 0.4)'); // 边缘透明
+        gradient.addColorStop(0, 'rgba(255, 255, 255, 0.9)'); // 中心透明度
+        gradient.addColorStop(1, 'rgba(255, 255, 255, 0.6)'); // 边缘透明度
         ctx.fillStyle = gradient;
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2); // 绘制圆形雪花
@@ -82,4 +82,4 @@ window.addEventListener('resize', () => {
     snowflakes.forEach(snowflake => {
         snowflake.reset();
     });
-});
+}); 
