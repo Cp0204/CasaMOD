@@ -42,6 +42,7 @@
 
 | 名称 | 功能描述 | 作者 |
 | --- | -------- | ---- |
+| cn-fix-icon | 修复国内应用图标网络错误 🎨 | Cp0204 |
 | add-widget-saying | 头像和一言融合版本 👋 | ChishFoxcat |
 | dont-change-my-icon | 禁止编辑镜像地址时自动匹配图标 🚫 | Cp0204 |
 | add-hostname-to-title | 添加主机名到网页标题 ➕ | Cp0204 |

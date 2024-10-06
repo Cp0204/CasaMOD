@@ -43,6 +43,7 @@ In addition, you can access the files in the `/DATA/AppData/casamod/icon` direct
 
 | Name | Description | Author |
 | ---- | ----------- | ------ |
+| cn-fix-icon | Fixed app icon network error in China 🎨 | Cp0204 |
 | add-widget-saying | Merger of hello and quotable 👋 | ChishFoxcat |
 | dont-change-my-icon | Disable auto-matching icons when editing image 🚫 | Cp0204 |
 | add-hostname-to-title | Add hostname to title ➕ | Cp0204 |
