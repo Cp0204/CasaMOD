@@ -43,6 +43,7 @@ In addition, you can access the files in the `/DATA/AppData/casamod/icon` direct
 
 | Name | Description | Author |
 | ---- | ----------- | ------ |
+| snow-wallpaper | Add snow effect to wallpaper ❄️ | leaf-126 |
 | cn-fix-icon | Fixed app icon network error in China 🎨 | Cp0204 |
 | add-widget-saying | Merger of hello and quotable 👋 | ChishFoxcat |
 | dont-change-my-icon | Disable auto-matching icons when editing image 🚫 | Cp0204 |
