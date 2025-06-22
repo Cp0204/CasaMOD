@@ -42,6 +42,7 @@
 
 | 名称 | 功能描述 | 作者 |
 | --- | -------- | ---- |
+| fix-mobile-page-padding | 临时修复某些手机浏览器（如 Brave）下页面布局错误 🩹 | jiesou |
 | snow-wallpaper | 给壁纸添加下雪效果 ❄️ | leaf-126 |
 | cn-fix-icon | 修复国内应用图标网络错误 🎨 | Cp0204 |
 | add-widget-saying | 头像和一言融合版本 👋 | ChishFoxcat |
