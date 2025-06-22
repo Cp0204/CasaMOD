@@ -1,0 +1,12 @@
+@media screen and (max-width: 768px) {
+    /*fix App Setting "Save" button below*/
+     div.animation-content > div.modal-card > section {
+        height: calc(-330px + 100vh)  !important;
+    }
+    /*fix App Store "Custom Install" buttom above*/
+    /*also fix App Store app page "Back" buttom above*/
+    div._stepStoreList {
+        margin-top: 120px !important;
+    }
+}
+
