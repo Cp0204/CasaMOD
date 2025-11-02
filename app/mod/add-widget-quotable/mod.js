@@ -11,7 +11,7 @@
         newElement.setAttribute('widget-id', 'quotable');
 
 
-        const title = localStorage.getItem('lang')
+        title = localStorage.getItem('lang')
         if (title == "zh_cn") {
             title = '💬 一言';
         } else if (title == "tr_tr") {
@@ -79,6 +79,14 @@
                 }
             }
             // 获取新的一言
+            if (localStorage.getItem('lang') === "zh_cn") {
+                localStorage.setItem('quotable', '一言加载中...');
+            } else if (localStorage.getItem('lang') === "tr_tr") {
+                localStorage.setItem('quotable', 'Alıntı yükleniyor...');
+            } else {
+                localStorage.setItem('quotable', 'Loading...');
+            }
+
             const newQuotable = await getQuotable();
             localStorage.setItem(cacheKey, JSON.stringify({
                 quotable: newQuotable,
