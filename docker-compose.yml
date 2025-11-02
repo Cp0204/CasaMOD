@@ -36,9 +36,11 @@ x-casaos:
   description:
     en_us: Add MODs like a game, and elegantly make some fancy modifications to the CasaOS frontend. Examples include mouse effects, animated wallpapers, modified themes, and more.
     zh_cn: 像游戏一样打 MOD （模组），优雅地为 CasaOS 前端做一些花里胡哨的修改。例如鼠标特效、动态背景、修改主题，等等。
+    tr_tr: Oyun gibi MOD'lar ekleyin ve CasaOS ön ucuna zarif bazı süslü değişiklikler yapın. Örnekler fare efektleri, animasyonlu duvar kağıtları, değiştirilmiş temalar ve daha fazlasını içerir.
   tagline:
     en_us: MOD for CasaOS, Make your CasaOS unique
     zh_cn: 给 CasaOS 打 MOD ，让你的 CasaOS 独一无二
+    tr_tr: CasaOS için MOD, CasaOS'unuzu benzersiz yapın
   title:
     en_us: CasaMOD
   tips:
@@ -55,6 +57,12 @@ x-casaos:
         3. 重启 CasaMOD ，完成！
 
         你可以在[这里](https://github.com/Cp0204/CasaMOD/blob/main/README_CN.md)查找新MOD，和贡献你的MOD 😉
+      tr_tr: |
+        1. CasaMOD'u yükleyin
+        2. Etkinleştirmek istediğiniz MOD dizinini `/DATA/AppData/casamod/mod` dizinine koyun.
+        3. CasaMOD'u yeniden başlatın ve bitirin!
+
+        Yeni MOD bulabilir ve MOD'unuzu [burada](https://github.com/Cp0204/CasaMOD/blob/main/README_TR.md) katkıda bulunabilirsiniz 😉
   scheme: https
   hostname: github.com
   port_map: ''

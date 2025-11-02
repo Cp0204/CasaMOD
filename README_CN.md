@@ -4,7 +4,7 @@
 
 # CasaMOD
 
-[English](/README.md) | 简体中文
+[English](/README.md) | 简体中文 | [Türkçe](/README_TR.md)
 
 让你的 CasaOS 独一无二 ✨
 
