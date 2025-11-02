@@ -11,7 +11,15 @@
         newElement.setAttribute('widget-id', 'quotable');
 
 
-        const title = localStorage.getItem('lang') === "zh_cn" ? '💬 一言' : '💬 Quotable';
+        const title = localStorage.getItem('lang')
+        if (title == "zh_cn") {
+            title = '💬 一言';
+        } else if (title == "tr_tr") {
+            title = '💬 Alıntı';
+        } else {
+            title = '💬 Quotable';
+        }
+
         quotable = "Loading..."
 
         newElement.innerHTML = `
@@ -38,6 +46,15 @@
                     const response = await fetch('https://v1.hitokoto.cn/');
                     const data = await response.json();
                     return data.hitokoto;
+                } else if (localStorage.getItem('lang') === "tr_tr") {
+                    const response = await fetch('https://api.allorigins.win/get?url=' + encodeURIComponent('https://zenquotes.io/api/random'));
+                    const data = await response.json();
+                    const quoteData = JSON.parse(data.contents);
+                    const text = quoteData[0].h;
+
+                    const translated = await fetch(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=tr&dt=t&q=${encodeURIComponent(text)}`);
+                    const translation = await translated.json();
+                    return translation[0][0][0];
                 } else {
                     const response = await fetch('https://api.quotable.io/quotes/random');
                     const data = await response.json();

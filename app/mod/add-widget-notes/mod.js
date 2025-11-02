@@ -8,6 +8,10 @@
         title = '📝 快捷便签';
         placeholder = '记录点什么！';
         tips = '❗注意：仅保存在本浏览器';
+    } else if (localStorage.getItem('lang') == "tr_tr") {
+        title = '📝 Notlar';
+        placeholder = 'Bir şeyler kaydedin!';
+        tips = '❗İpucu: Sadece yerel tarayıcıya kaydedilir';
     } else {
         title = '📝 Notes';
         placeholder = 'Record something!';

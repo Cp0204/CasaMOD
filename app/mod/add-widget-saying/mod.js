@@ -7,7 +7,14 @@
 
         userImage = "/v1/users/avatar?token=" + localStorage.getItem('access_token');
         userName = JSON.parse(localStorage.getItem('user')).username;
-        saying = localStorage.getItem('lang') === "zh_cn" ? "你好！一言加载中..." : "Hi, Saying is loading...";
+        saying = localStorage.getItem('lang')
+        if (saying == "zh_cn") {
+            saying = '你好！一言加载中...';
+        } else if (saying == "tr_tr") {
+            saying = 'Merhaba! Söylem yükleniyor...';
+        } else {
+            saying = 'Hi, Saying is loading...';
+        }
 
         newElement.innerHTML = `
 <div class="widget has-text-white is-relative">
@@ -39,6 +46,15 @@
                     const response = await fetch('https://v1.hitokoto.cn/');
                     const data = await response.json();
                     return data.hitokoto;
+                } else if (localStorage.getItem('lang') === "tr_tr") {
+                    const response = await fetch('https://api.allorigins.win/get?url=' + encodeURIComponent('https://zenquotes.io/api/random'));
+                    const data = await response.json();
+                    const quoteData = JSON.parse(data.contents);
+                    const text = quoteData[0].h;
+
+                    const translated = await fetch(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=tr&dt=t&q=${encodeURIComponent(text)}`);
+                    const translation = await translated.json();
+                    return translation[0][0][0];
                 } else {
                     const response = await fetch('https://api.quotable.io/quotes/random');
                     const data = await response.json();
