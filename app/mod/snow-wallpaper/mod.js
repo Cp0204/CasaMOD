@@ -9,7 +9,7 @@ canvas.style = `
     width: 100%;
     height: 100%;
     pointer-events: none; /* 让鼠标事件穿透画布，不影响下方内容 */
-    z-index: 9999;
+    // z-index: 9999;
 `;
 const ctx = canvas.getContext('2d');
 let width = canvas.width = window.innerWidth;
