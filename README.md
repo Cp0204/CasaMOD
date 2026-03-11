@@ -61,6 +61,7 @@ In addition, you can access the files in the `/DATA/AppData/casamod/icon` direct
 | emoji-cursor | Add emoji follow for mouse 😂 | Anonymous |
 | bing-wallpaper | Automatically set the daily Bing wallpaper to the CasaOS background 🌇 | Cp0204 |
 | helloworld | Say Hello, World! 🌎 | Cp0204 |
+| network-title-setter | Detect network env, set page title dynamically—support intranet/public identification & custom config. | MingTechpro |
 
 ## Donate
 

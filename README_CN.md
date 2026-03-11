@@ -10,7 +10,6 @@
 
 像游戏一样打 MOD，为 CasaOS 前端做一些花里胡哨的修改🎨
 
-
 [![github tag][gitHub-tag-image]][github-url] [![docker pulls][docker-pulls-image]][docker-url] [![docker image size][docker-image-size-image]][docker-url]
 
 [gitHub-tag-image]: https://img.shields.io/github/v/tag/Cp0204/casamod
@@ -24,20 +23,22 @@
 ## 如何使用
 
 1. **寻找 MOD：**
-    *   前往 [/app/mod](/app/mod) 目录，查看现有的 MOD 列表
-    *   欢迎贡献新的 MOD！请参考下方 "贡献指南"
+    * 前往 [/app/mod](/app/mod) 目录，查看现有的 MOD 列表
+    * 欢迎贡献新的 MOD！请参考下方 "贡献指南"
 2. **安装 MOD：**
-    *   安装 CasaMOD 后
-    *   将 MOD 文件夹放置于 `/DATA/AppData/casamod/mod` 目录下
-    *   重启 CasaMOD，MOD 将自动生效。
+    * 安装 CasaMOD 后
+    * 将 MOD 文件夹放置于 `/DATA/AppData/casamod/mod` 目录下
+    * 重启 CasaMOD，MOD 将自动生效。
 3. **删除 MOD：**
-    *   将 MOD 文件移出 `/DATA/AppData/casamod/mod` 目录
-    *   重启 CasaMOD
+    * 将 MOD 文件移出 `/DATA/AppData/casamod/mod` 目录
+    * 重启 CasaMOD
 
 此外，你可以通过 `http://yourhost/icon/*` 访问到 `/DATA/AppData/casamod/icon` 目录中的文件。
 
 > [!WARNING]
-> ### 警告：不要加载来路不明、不明源代码的MOD，这可能会引发**安全**问题。
+>
+> ### 警告：不要加载来路不明、不明源代码的MOD，这可能会引发**安全**问题
+>
 ## MOD列表
 
 | 名称 | 功能描述 | 作者 |
@@ -60,6 +61,7 @@
 | emoji-cursor | 为鼠标添加emoji跟随 😂 | Anonymous |
 | bing-wallpaper | 自动将每日 Bing 壁纸设置为 CasaOS 背景 🌇  | Cp0204 |
 | helloworld    | 向你说 Hello, World! 🌎 | Cp0204 |
+| network-title-setter | 检测当前网络环境并动态设置页面标题，支持内网/公网环境识别和自定义配置 | MingTechpro |
 
 ## 赞助
 
@@ -80,9 +82,7 @@
 
 **注意事项：**
 
-*   请确保你的 MOD 不会影响 CasaOS 的核心功能和稳定性。🛡️
-*   请提供清晰的 MOD 说明文档，方便其他用户理解和使用。📖
+* 请确保你的 MOD 不会影响 CasaOS 的核心功能和稳定性。🛡️
+* 请提供清晰的 MOD 说明文档，方便其他用户理解和使用。📖
 
 **让我们一起打造更个性化的 CasaOS！🚀**
-
-

@@ -61,6 +61,7 @@ Ayrıca, `/DATA/AppData/casamod/icon` dizinindeki dosyalara `http://yourhost/ico
 | emoji-cursor | Fare için emoji takip ekleyin 😂 | Anonymous |
 | bing-wallpaper | Günlük Bing duvar kağıdını CasaOS arka planına otomatik olarak ayarlayın 🌇 | Cp0204 |
 | helloworld | Merhaba Dünya deyin! 🌎 | Cp0204 |
+| network-title-setter | Ağ ortamını tespit et, sayfa başlığını dinamik olarak ayarla—intranet/public tanımlamayı ve özel yapılandırmayı destekle. | MingTechpro |
 
 ## Bağış
 
