@@ -1,6 +1,6 @@
 // name: network-title-setter
 // author: MingTechpro
-// date: 2026-03-11
+// date: 2026-03-12
 // description: 检测当前网络环境并动态设置页面标题，支持内网/公网环境识别和自定义配置
 // description: Detect network env, set page title dynamically—support intranet/public identification & custom config.
 
