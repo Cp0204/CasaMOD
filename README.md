@@ -62,6 +62,8 @@ In addition, you can access the files in the `/DATA/AppData/casamod/icon` direct
 | bing-wallpaper | Automatically set the daily Bing wallpaper to the CasaOS background 🌇 | Cp0204 |
 | helloworld | Say Hello, World! 🌎 | Cp0204 |
 | network-title-setter | Detect network env, set page title dynamically—support intranet/public identification & custom config. | MingTechpro |
+| text-extensions-mod | Injects **✏️ Edit as Text** button into the CasaOS
+file manager popup for file types that CasaOS wouldn't normally let you edit. | metisro |
 
 ## Donate
 
