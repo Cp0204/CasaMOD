@@ -1,0 +1,9 @@
+{
+  "name": "show-dotfiles",
+  "version": "1.0.0",
+  "description": "Show hidden dot files (e.g. .env, .gitignore, .config) in the CasaOS file manager. Adds a toggle in the Settings dropdown to turn visibility on/off.",
+  "author": "metisro",
+  "casaos_min_version": "0.4.0",
+  "entry": "mod.js",
+  "styles": ["mod.css"]
+}
