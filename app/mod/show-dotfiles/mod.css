@@ -1,0 +1,17 @@
+/*
+ * CasaMOD: show-dotfiles v1
+ * Styles the injected settings row and marks dotfile entries in the file manager.
+ */
+
+/* Match the CasaOS switch style so our checkbox looks identical */
+#casamod-dotfiles-row .switch input[type="checkbox"] {
+  cursor: pointer;
+}
+
+/* Dotfile rows: subtle italic so they stand out from normal files */
+[class*="file-item"][data-name^="."] [class*="name"],
+[class*="list-item"][data-name^="."] [class*="name"],
+[class*="file-row"][data-name^="."] [class*="name"] {
+  font-style: italic;
+  opacity: 0.85;
+}
