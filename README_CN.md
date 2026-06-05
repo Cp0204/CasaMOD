@@ -62,6 +62,9 @@
 | bing-wallpaper | 自动将每日 Bing 壁纸设置为 CasaOS 背景 🌇  | Cp0204 |
 | helloworld    | 向你说 Hello, World! 🌎 | Cp0204 |
 | network-title-setter | 检测当前网络环境并动态设置页面标题，支持内网/公网环境识别和自定义配置 | MingTechpro |
+| bing-wallpaper-v2 | 自动设置必应壁纸，右键显示壁纸描述，支持多语言 🌇 | Cp0204 |
+| show-dotfiles | 在 CasaOS 文件管理器中显示隐藏的点文件（如 `.env`、`.gitignore`），支持设置中切换显示/隐藏 👁️ | metisro |
+| text-extensions-mod | 在 CasaOS 文件管理器弹窗中注入 **✏️ 以文本编辑** 按钮，支持编辑 CasaOS 原本不支持的文件类型 | metisro |
 
 ## 赞助
 

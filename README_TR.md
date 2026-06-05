@@ -62,6 +62,9 @@ Ayrıca, `/DATA/AppData/casamod/icon` dizinindeki dosyalara `http://yourhost/ico
 | bing-wallpaper | Günlük Bing duvar kağıdını CasaOS arka planına otomatik olarak ayarlayın 🌇 | Cp0204 |
 | helloworld | Merhaba Dünya deyin! 🌎 | Cp0204 |
 | network-title-setter | Ağ ortamını tespit et, sayfa başlığını dinamik olarak ayarla—intranet/public tanımlamayı ve özel yapılandırmayı destekle. | MingTechpro |
+| bing-wallpaper-v2 | Bing duvar kağıdını otomatik olarak ayarlayın, duvar kağıdı açıklamasını görmek için sağ tıklayın, çoklu dil desteği 🌇 | Cp0204 |
+| show-dotfiles | CasaOS dosya yöneticisinde gizli nokta dosyalarını (ör. `.env`, `.gitignore`) gösterir, Ayarlar'dan açılıp kapatılabilir 👁️ | metisro |
+| text-extensions-mod | CasaOS dosya yöneticisi açılır penceresine CasaOS'un normalde düzenlemenize izin vermeyeceği dosya türleri için **✏️ Metin Olarak Düzenle** düğmesi ekler. | metisro |
 
 ## Bağış
 
